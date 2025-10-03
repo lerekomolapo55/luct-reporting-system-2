@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/luct-reporting-system-2/static/css/main.5d49e60b.css",
+    "main.js": "/luct-reporting-system-2/static/js/main.2aaf07ad.js",
+    "static/js/453.670e15c7.chunk.js": "/luct-reporting-system-2/static/js/453.670e15c7.chunk.js",
+    "index.html": "/luct-reporting-system-2/index.html",
+    "main.5d49e60b.css.map": "/luct-reporting-system-2/static/css/main.5d49e60b.css.map",
+    "main.2aaf07ad.js.map": "/luct-reporting-system-2/static/js/main.2aaf07ad.js.map",
+    "453.670e15c7.chunk.js.map": "/luct-reporting-system-2/static/js/453.670e15c7.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5d49e60b.css",
+    "static/js/main.2aaf07ad.js"
+  ]
+}
