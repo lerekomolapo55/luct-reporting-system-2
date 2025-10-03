@@ -2,10 +2,10 @@
   "name": "luct-backend",
   "version": "1.0.0",
   "description": "LUCT Faculty Reporting System Backend",
-  "main": "server.js",
+  "main": "api.js",
   "scripts": {
-    "start": "node server.js",
-    "dev": "nodemon server.js"
+    "start": "node api.js",
+    "dev": "nodemon api.js"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
