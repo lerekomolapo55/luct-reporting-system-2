@@ -3,11 +3,11 @@ const { Sequelize } = require('sequelize');
 
 const sequelize = new Sequelize({
   dialect: 'mysql',
-  host: 'localhost',
-  port: 3306,
-  database: 'luct_faculty_reporting',
-  username: 'root',
-  password: '',
+  host: process.env.MYSQL_HOST || 'localhost',
+  port: process.env.MYSQL_PORT || 3306,
+  database: process.env.MYSQL_DB || 'luct_faculty_reporting',
+  username: process.env.MYSQL_USER || 'root',
+  password: process.env.MYSQL_PASSWORD || '',
   logging: false,
   define: {
     timestamps: true,
@@ -26,15 +26,21 @@ const sequelize = new Sequelize({
 
 const testConnection = async () => {
   try {
+    console.log('Attempting to connect to MySQL database with config:', {
+      host: sequelize.options.host,
+      port: sequelize.options.port,
+      database: sequelize.config.database,
+      username: sequelize.config.username,
+    });
     await sequelize.authenticate();
-    console.log('✅ XAMPP MySQL database connection established successfully.');
+    console.log('✅ MySQL database connection established successfully.');
     
     await sequelize.sync({ alter: true });
     console.log('✅ Database synchronized successfully.');
     
     return true;
   } catch (error) {
-    console.error('❌ Unable to connect to XAMPP MySQL database:', error.message);
+    console.error('❌ Unable to connect to MySQL database:', error.message);
     return false;
   }
 };
